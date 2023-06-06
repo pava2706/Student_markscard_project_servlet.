@@ -21,41 +21,61 @@ public class StudentMarksUpdate extends HttpServlet {
 		// TODO Auto-generated method stub
 		// super.doPost(req, resp);
 
-		String reg = req.getParameter("regno");
-		int regno = Integer.parseInt(reg);
+		String regno = req.getParameter("regno");
 		String name = req.getParameter("name");
 		String dob = req.getParameter("dob");
 		String father = req.getParameter("father");
+		String gender = req.getParameter("gender");
 		String kan1 = req.getParameter("kannada");
 		int kannada = Integer.parseInt(kan1);
+		String kan = req.getParameter("kannadaIM");
+		int kannadaIM = Integer.parseInt(kan);
 		String eng = req.getParameter("english");
 		int english = Integer.parseInt(eng);
+		String eng1 = req.getParameter("englishIM");
+		int englishIM = Integer.parseInt(eng1);
 		String hin = req.getParameter("hindi");
 		int hindi = Integer.parseInt(hin);
+		String hin1 = req.getParameter("hindiIM");
+		int hindiIM = Integer.parseInt(hin1);
 		String math = req.getParameter("maths");
 		int maths = Integer.parseInt(math);
+		String math1 = req.getParameter("mathsIM");
+		int mathsIM = Integer.parseInt(math1);
 		String sci = req.getParameter("science");
 		int science = Integer.parseInt(sci);
+		String sci1 = req.getParameter("scienceIM");
+		int scienceIM = Integer.parseInt(sci1);
 		String soc = req.getParameter("social");
 		int social = Integer.parseInt(soc);
-
-		int tot = kannada + english + hindi + maths + science + social;
-		String percentage = tot / 6 + "%";
+		String soc1 = req.getParameter("socialIM");
+		int socialIM = Integer.parseInt(soc1);
+		
+		int tot = kannada + english + hindi + maths + science + social + kannadaIM + englishIM + hindiIM + mathsIM
+				+ scienceIM + socialIM;
+		double percentage = tot / 100 * 625;
 
 		StudentMarks dto = new StudentMarks();
 		dto.setRegister_No(regno);
 		dto.setName(name);
 		dto.setDate_of_Birth(dob);
 		dto.setFather_Name(father);
+		dto.setGender(gender);
 		dto.setKannada(kannada);
 		dto.setEnglish(english);
 		dto.setHindi(hindi);
 		dto.setMathematics(maths);
 		dto.setScience(science);
 		dto.setSocialScience(social);
+		dto.setKanIM(kannadaIM);
+		dto.setEngIM(englishIM);
+		dto.setHinIM(hindiIM);
+		dto.setMathsIM(mathsIM);
+		dto.setScienceIM(scienceIM);
+		dto.setSocialIM(socialIM);
 		dto.setTotal_Marks(tot);
 		dto.setPercentage(percentage);
-
+		
 		StudentMarksDao dao = new StudentMarksDao();
 
 		dao.update(dto);

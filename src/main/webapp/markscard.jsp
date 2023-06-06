@@ -15,7 +15,7 @@ body, html {
 }
 
 nav {
-	padding-top: 100px;
+	padding-top:100px;
 	padding-left: 15px;
 }
 
@@ -61,12 +61,19 @@ div {
 				<th>Name</th>
 				<th>DOB</th>
 				<th>Father_name</th>
+				<th>Gender</th>
 				<th>Kannada</th>
 				<th>English</th>
 				<th>Hindi</th>
 				<th>Mathematics</th>
 				<th>Science</th>
 				<th>SocialScience</th>
+				<th>KannadaIM</th>
+				<th>EnglishIM</th>
+				<th>HindiIM</th>
+				<th>MathematicsIM</th>
+				<th>ScienceIM</th>
+				<th>SocialScienceIM</th>
 				<th>Total_Marks</th>
 				<th>Percentage</th>
 			</tr>
@@ -78,12 +85,19 @@ div {
 				<td><%=a.getName()%></td>
 				<td><%=a.getDate_of_Birth()%></td>
 				<td><%=a.getFather_Name()%></td>
+				<td><%=a.getGender()%></td>
 				<td><%=a.getKannada()%></td>
 				<td><%=a.getEnglish()%></td>
 				<td><%=a.getHindi()%></td>
 				<td><%=a.getMathematics()%></td>
-				<td><%=a.getScience()%></td>'
+				<td><%=a.getScience()%></td>
 				<td><%=a.getSocialScience()%></td>
+				<td><%=a.getKanIM()%></td>
+				<td><%=a.getEngIM()%></td>
+				<td><%=a.getHinIM()%></td>
+				<td><%=a.getMathsIM()%></td>
+				<td><%=a.getScienceIM()%></td>
+				<td><%=a.getSocialIM()%></td>
 				<td><%=a.getTotal_Marks()%></td>
 				<td><%=a.getPercentage()%></td>
 			</tr>

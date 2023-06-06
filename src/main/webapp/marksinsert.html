@@ -14,6 +14,7 @@ font-family:cursive;
   color: navy;
   font-weight: bold;
 }
+
 #form{
 background-color: silver;
  height: 50px;
@@ -48,73 +49,93 @@ color:yellow;
 <form action="insert" method="post" >
 <table id="form" align="center" border=5px solid black>
 <tr>
-<th>
+<th colspan="2">
 Register_No :
 </th>
-<td><input type="number" placeholder="Insert no"  name="regno" required></td>
+<td><input type="text" placeholder="Insert no"  name="regno" required></td>
+<!-- <td>2</td> -->
 </tr>
 
 <tr>
-<th>
+<th colspan="2">
 Name :
 </th>
 <td><input type="text" placeholder="Insert name"  name="name" required></td>
+<!-- <td>2</td> -->
 </tr>
 
 <tr>
-<th>
-DOB :
+<th colspan="2">
+Date Of Birth :
 </th>
 <td><input type="date" name="dob"  placeholder="DOB " required></td>
+<!-- <td>2</td> -->
 </tr>
 
 <tr>
-<th>
+<th colspan="2">
 Father_name :
 </th>
 <td><input type="text" name="father" placeholder="enter father name" required></td>
+<!-- <td>2</td> -->
+</tr>
+
+<tr>
+<th colspan="2">
+Gender :
+</th>
+<td>male <input type="radio" name="gender"required value="male">
+female <input type="radio" name="gender"required value="female">
+</td>
+<!-- <td>2</td> -->
 </tr>
 
 <tr>
 <th>
 Kannada :
 </th>
-<td><input type="number" placeholder="kannada marks"  name="kannada" required></td>
+<td><input type="number" placeholder="kannada External marks"  name="kannada" max="100" required></td>
+<td><input type="number" placeholder="kannada Internal marks"  name="kannadaIM" max="25" required></td>
 </tr>
 
 <tr>
 <th>
 English :
 </th>
-<td><input type="number" placeholder="English marks"  name="english" required></td>
+<td><input type="number" placeholder="English External marks"  name="english" max="80" required></td>
+<td><input type="number" placeholder="English Internal marks"  name="englishIM" max="20" required></td>
 </tr>
 
 <tr>
 <th>
 Hindi :
 </th>
-<td><input type="number" placeholder="Hindi marks"  name="hindi" required></td>
+<td><input type="number" placeholder="Hindi External marks"  name="hindi" max="80" required></td>
+<td><input type="number" placeholder="Hindi Internal marks"  name="hindiIM" max="20" required></td>
 </tr>
 
 <tr>
 <th>
 Mathematics :
 </th>
-<td><input type="number" placeholder="maths marks"  name="maths" required></td>
+<td><input type="number" placeholder="maths External marks"  name="maths" max="80" required></td>
+<td><input type="number" placeholder="maths internal marks"  name="mathsIM" max="20" required></td>
 </tr>
 
 <tr>
 <th>
 Science :
 </th>
-<td><input type="number" placeholder="science marks"  name="science" required></td>
+<td><input type="number" placeholder="science External marks"  name="science" max="80" required></td>
+<td><input type="number" placeholder="science Internal marks"  name="scienceIM" max="20" required></td>
 </tr>
 
 <tr>
 <th>
 SocialScience :
 </th>
-<td><input type="number" placeholder="social marks"  name="social" required></td>
+<td><input type="number" placeholder="social External marks"  name="social" max="80" required></td>
+<td><input type="number" placeholder="social Internal marks"  name="socialIM" max="20" required></td>
 </tr>
 
 <tr>

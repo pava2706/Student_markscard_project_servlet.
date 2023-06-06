@@ -11,7 +11,10 @@
 body,html{ 
 margin: 0px;
 padding: 0px;
-background-color: silver;
+background-image: url("https://i.pinimg.com/236x/89/b5/c0/89b5c0ae83799cfcbe7acb283cacc600.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+
 }
 nav{
 padding-left:1px;
@@ -38,12 +41,12 @@ border-bottom-color: 10px black;
 text-align:center;
 }
 span{
-padding-left:50px;
+padding-left:100px;
 }
 button {
 	background-color: maroon;
 	font-size: 20px;
-	color: aqua;
+	color: white;
 }
 
 </style>
@@ -53,6 +56,7 @@ button {
 <%
 	StudentMarks a =(StudentMarks)  request.getAttribute("studentmarks");
 	%>
+	<% %>
 	<nav>
 	<h4 align="center"><b>GOVERNMENT OF KARNATAKA</b></h4>
 	<h1 align="center"><b>Karnataka Secondary Examination Board</b></h1>
@@ -73,8 +77,8 @@ button {
 	<p>Father's Name:<b style="text-transform: uppercase;"><%=a.getFather_Name() %></b></p>
 	<table style="border: 1px solid" border="1px" cellspacing="0px" cellpadding="10px">
 	<tr>
-	<td>Date of Birth : <b><%=a.getDate_of_Birth() %> TWO-THOUSAND-ONE-JUNE-TWENTY-SEVEN</b></td>
-	<td>Gender : <b>BOY</b></td>
+	<td>Date of Birth : <b><%=a.getDate_of_Birth()%> TWO-THOUSAND-ONE-JUNE-TWENTY-SEVEN</b></td>
+	<td>Gender : <b style="text-transform: uppercase;"><%=a.getGender() %></b></td>
 	</tr>
 	</table>
 	

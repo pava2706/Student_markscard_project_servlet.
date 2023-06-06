@@ -72,14 +72,14 @@ div {
 			&name=<%=a.getName()%>
 			&dob=<%=a.getDate_of_Birth()%>
 			&father=<%=a.getFather_Name()%>
+			&gen=<%=a.getGender()%>
 			&kan=<%=a.getKannada()%>
 			&eng=<%=a.getEnglish()%>
-			&hin=<%=a.getHindi()%> 
+			&hindi=<%=a.getHindi()%>
 			&math=<%=a.getMathematics()%>
 			&science=<%=a.getScience()%>
 			&social=<%=a.getSocialScience()%>
 ">update</a></td>
-		</tr>
 		</tr>
 		<%
 		}
